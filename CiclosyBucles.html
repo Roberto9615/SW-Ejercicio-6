@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos y Bucles</title>
+
+    <script>
+        var arreglo = [];
+        var SumaT = 0;
+        var MP = 1;
+        var SumImp = 0;
+        var Primo = 0;
+        var LisPrim = " ";
+        var LisNoPrim = " ";
+        
+        for( var i = 0; i < 20; i++){
+            arreglo[i] = Math.round(Math.random() *100);
+            alert("Número: "+arreglo[i]);
+
+            SumaT += arreglo[i];
+            if(arreglo[i] % 2 == 0){
+                MP = MP * arreglo[i];
+
+            }
+            else{
+                SumImp += arreglo[i];
+            }
+            //VERIFICACIÓN DE LOS NUMEROS PRIMOS
+            Primo = 0;
+            for( var c = 1; c < arreglo[i]; c++){
+                if(arreglo[i] % 2 == 0){
+                    Primo += 1;
+                }
+
+            }
+            if(Primo > 2){
+                LisPrim += "-"+arreglo[i];
+            }
+            else{
+                LisNoPrim += "-"+arreglo[i];
+            }
+        }
+        alert("La suma total del arreglo es: "+SumaT);
+        alert("La multiplicación de números pares es: "+MP);
+        alert("La suma de los números impares es: "+SumImp);
+        alert("La lista de los números primos: "+LisPrim);
+        alert("La lista de los números que No son primos son: "+LisNoPrim);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
